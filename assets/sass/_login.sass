@@ -1,0 +1,123 @@
+.form-style
+	+clearfix
+	+make-row
+	label
+		font-weight: 600
+		width: 40%	
+		display: inline-block
+		margin-bottom: 0.5em
+		vertical-align: top
+		@media (min-width: $screen-lg-min)
+			width: 40%
+		&.address 
+			width: 90%
+			@media (min-width: $screen-lg-min)
+				margin-bottom: 4.8em
+	input[type="text"],input[type="email"],input[type="password"]
+		width: 59%
+		// max-width: 200px
+		border: 1px solid #aaa
+		box-shadow: 0px 0px 3px #eee	
+		line-height: 2em
+		padding: 0 0.5em
+		&:focus 
+			border-color: $secondary
+			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+	select 
+		line-height: 2em
+		padding: 0.2em 0.5em
+		width: 200px
+		border: 1px solid #aaa
+		background-color: #fff	
+		outline: none
+		&:focus 
+			border-color: $secondary
+			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+	.block-headline
+		font-weight: 800
+		text-transform: uppercase
+		border-bottom: 1px solid #000	
+		line-height: 1
+		padding-bottom: 0.5em
+		margin-bottom: 1em
+		+clearfix
+		p 
+			margin-bottom: 0px
+		* 
+			display: inline-block
+		a 
+			float: right
+			color: #000
+			text-transform: none
+			font-weight: 400
+			&:hover 
+				color: $secondary
+			&:before 
+				font-family: "FontAwesome"
+				content: "\f059"
+				margin-right: 0.2em
+				color: $secondary	
+			&.edit
+				font-size: 0.9em
+				color: #000
+				&:before
+					content: "\f07a"				
+					margin-right: 0.5em
+					font-size: 1.2em
+					color: #000
+				&:hover 
+					color: $secondary
+					&:before
+						color: $secondary		
+.login-content
+	@extend .checkout-content
+	width: 100%
+	float: none
+	padding: 0px
+	+clearfix
+.login-block
+	+make-lg-column(6)
+	+make-md-column(6)	
+	.auth-clients
+		background-color: $secondary
+		&:hover 
+			background-color: $primary
+.login-facebook	
+	background-color: #3b5998
+	color: #fff
+	padding: 0.33em
+	margin-bottom: 0.5em
+	border-radius: 0.2em	
+	&:after
+		font-family: "FontAwesome"
+		content: "\f09a"
+		margin-left: 0.5em
+		padding-right: 0.2em
+		padding-left: 0.5em
+		border-left: 1px solid rgba(#fff, 20)
+	&:hover 
+		color: #fff	
+.login-google-plus
+	background-color: #DF4A32
+	color: #fff
+	padding: 0.33em
+	border-radius: 0.2em	
+	&:after
+		font-family: "FontAwesome"
+		content: "\f0d5"
+		margin-left: 0.5em
+		padding-right: 0.2em
+		padding-left: 0.5em
+		border-left: 1px solid rgba(#fff, 20)
+	&:hover 
+		color: #fff		
+.terms
+	+clearfix		
+	a 
+		color: #000
+		text-decoration: underline		
+	.form-group
+		+clearfix
+	p 
+		margin-bottom: 0px		
+		

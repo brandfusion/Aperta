@@ -1,0 +1,107 @@
+.home-boxes	
+	+make-sm-column(6)
+	padding: 0
+	margin-bottom: 1em
+	// background-color: cyan	
+	font-family: "Roboto Condensed"
+	.title
+		font-weight: 300
+		font-size: 1.2em
+		line-height: 2em
+		text-transform: uppercase
+		padding: 0 0.5em
+		color: #fff
+		@media (max-width: 1280px)
+			font-size: 1em
+	// img 
+	// 	margin-bottom: 1em
+	.inner-content
+		position: absolute
+		left: 1em
+		bottom: 1em
+		background-color: rgba(255, 255, 255, 0.85)
+		padding: 1em
+		a 
+			border-bottom: 1px dashed #000
+			color: #000
+			font-weight: 300	
+			display: block
+			position: relative
+			padding-right: 2em
+			&:after
+				font-family: "FontAwesome"
+				content: "\f105"
+				position: absolute
+				right: 0			
+	.school		
+		.title
+			background-color: #008aff
+		a:hover 
+			color: #008aff
+	.office
+		.title
+			background-color: #7fce13	
+		a:hover 
+			color: #7fce13		
+	.catalog
+		.title
+			background-color: #F2F2F2
+			color: #000
+			.fa 
+				float: right
+				margin-top: 0.5em
+				color: $primary
+				cursor: pointer
+				&:hover
+					color: $green
+	.wide
+		+make-sm-column(4)
+		// opacity: 0		
+		.school, .office, .catalog
+			height: 100%
+			position: relative
+	.narrow
+		+make-sm-column(2)	
+	.test2
+		+box-img-only()
+	.test3
+		+box-img-only()
+	.test4
+		+box-img-only()
+.featured-list	
+	+make-sm-column(12)	
+	opacity: 1
+	overflow: hidden
+	.product-list
+		// margin: 0
+		.item 
+			width: 100%
+.newin-list
+	+make-sm-column(4)	
+	.product-list
+		.item
+			+make-sm-column(3)
+.logos-list			
+	+make-xs-column(12)
+	padding-bottom: 1em
+	.list-header
+		margin-bottom: 1.5em
+	img 
+		max-width: 100px
+		margin: 0 auto
+.list-header
+	font-size: 1em
+	font-family: "Roboto Condensed", sans-serif
+	font-weight: 400
+	border-bottom: 2px solid #000
+	margin-bottom: 0.5em
+	line-height: 1.5em	
+	color: #000
+	text-transform: uppercase		
+.product-list
+	+make-row	
+	.item 		
+		+make-xs-column(6)
+		+make-sm-column(3)
+		+make-md-column(2)
+	

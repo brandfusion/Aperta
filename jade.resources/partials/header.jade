@@ -1,0 +1,164 @@
+.header
+	.upper 
+		.container		
+			.logo
+				a(href='homepage.html')
+					img(src='assets/img/logo-aperta.svg' class='img-responsive')   
+			.main-nav
+				ul
+					li
+						a.active(href='category.html')  Home 
+					li
+						a(href='category.html') Despre Aperta
+					li.dropdown					
+						a(href='category.html' class='magazin-dropwdown') Catalog
+						ul.dropdown-menu.mega-menu
+							.level-2-container
+								li.level-2
+									a(href='category.html') Organizare, arhivare, prezentare 
+									ul
+										each val in [1,2,3,4,5]
+											li.level-3
+												a(href='category.html') Menu Level 3 
+							.level-2-container                         
+								li.level-2
+									a(href='category.html') Scriere si corectare
+									ul
+										each val in [1,2,3,4,5]
+											li.level-3
+												a(href='category.html') Menu Level 3
+							.level-2-container
+								li.level-2
+									a(href='category.html') Articole din hartie
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3
+							.level-2-container          
+								li.level-2
+									a(href='category.html') Ambalare si etichetare
+									ul
+										each val in [1,2,3,4,5,6,7]
+											li.level-3
+												a(href='category.html') Menu Level 3              
+							.level-2-container
+								li.level-2
+									a(href='category.html') Articole scolare
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3
+							.level-2-container
+								li.level-2
+									a(href='category.html') Articole pentru birou
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3   
+							.level-2-container
+								li.level-2
+									a(href='category.html') Produse pentru curatenie
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3    
+							.level-2-container
+								li.level-2
+									a(href='category.html') Cadouri si promotionale
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3
+					li
+						a(href='category.html') Cum cumpar?
+					li
+						a(href='category.html') Magazine partenere
+					li 	
+						a(href='category.html') Autentificare clienti
+					li 	
+						a(href='category.html') Contact	
+					//- li
+					//-   a(href='category.html') Ambalare si etichetare
+					//- li
+					//-   a(href='category.html') Articole scolare
+					//- li
+					//-   a(href='category.html') Articole pentru birou
+					//- li
+					//-   a(href='category.html') Produse pentru curatenie
+					//- li
+					//-   a(href='category.html') Cadouri si promotionale      
+			.search
+				form.form-group
+					input.form-control(type='search', placeholder='Cauta un produs...' class='hidden-fix')
+					button(type='button')
+						i.fa.fa-search      
+			.cos
+				a(href='cart.html')
+					img(src='assets/img/cart.svg')
+					span 5
+				//- span(style='line-height: 2.2em;' class="hidden-fix") produse 
+			.main-nav.magazin
+				ul 
+					li.dropdown					
+						a(href='category.html' class='magazin-dropwdown') Catalog
+						ul.dropdown-menu.mega-menu
+							.level-2-container
+								li.level-2
+									a(href='category.html') Organizare, arhivare, prezentare 
+									ul
+										each val in [1,2,3,4,5]
+											li.level-3
+												a(href='category.html') Menu Level 3 
+							.level-2-container                         
+								li.level-2
+									a(href='category.html') Scriere si corectare
+									ul
+										each val in [1,2,3,4,5]
+											li.level-3
+												a(href='category.html') Menu Level 3
+							.level-2-container
+								li.level-2
+									a(href='category.html') Articole din hartie
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3
+							.level-2-container          
+								li.level-2
+									a(href='category.html') Ambalare si etichetare
+									ul
+										each val in [1,2,3,4,5,6,7]
+											li.level-3
+												a(href='category.html') Menu Level 3              
+							.level-2-container
+								li.level-2
+									a(href='category.html') Articole scolare
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3
+							.level-2-container
+								li.level-2
+									a(href='category.html') Articole pentru birou
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3   
+							.level-2-container
+								li.level-2
+									a(href='category.html') Produse pentru curatenie
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3    
+							.level-2-container
+								li.level-2
+									a(href='category.html') Cadouri si promotionale
+									ul
+										each val in [1,2,3]
+											li.level-3
+												a(href='category.html') Menu Level 3                           
+			.my-account
+				a(href='create-account.html') 
+					i(class='fa fa-user')
+					| Creaza cont

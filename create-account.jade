@@ -1,0 +1,40 @@
+extend jade.resources/layout/master
+block content
+	.container.wrapper
+		.category-page		
+			h1.block-header.category-header.center-header Creaza cont	
+			.wrapper-fix
+				.login-content
+					form#ordersubmit1(name='ordersubmit', method='post' class='form-style')
+						.login-block
+							p(class='block-headline') Am deja cont
+							.form-group
+								label(for='email') Nume
+								input(type='text' name='EcomOrderCustomerPrenume' data-required='1' ident='billingEmail' copy='1')
+							.form-group
+								label(for='email') Prenume
+								input(type='text' name='EcomOrderCustomerPrenume' data-required='1' ident='billingEmail' copy='1')
+							.form-group
+								label(for='email') Email
+								input(type='text' name='EcomOrderCustomerEmail' data-required='1' ident='billingEmail' copy='1')
+							.form-group
+								label(for='prenume') Parola
+								input(type='text' name='EcomOrderCustomerPassword' data-required='1' ident='billingName' copy='1')
+							.terms
+								.form-group
+									input#customerAccepted.pull-left(type='checkbox')                  
+									p.pull-left
+										| Sunt de acord cu 
+										a.links(href='', data-toggle='modal', data-target='#terms') termenii si conditiile.
+								.form-group		
+									input#customerAccepted.pull-left(type='checkbox')	 
+									p.pull-left
+										| Ma abonez la Newsletterul Aperta											
+							a.auth-clients(href='#') Creaza cont
+							a(href='login.html' class='reset-password') Am deja cont
+						.login-block
+							p(class='block-headline') Autentifica-te cu alte conturi
+								.login-block-social
+									a(href='#' class='login-facebook') Autentifica-te ce Facebook
+									br
+									a(href='#' class='login-google-plus') Autentifica-te ce Google Plus

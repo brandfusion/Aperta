@@ -1,0 +1,18 @@
+extend jade.resources/layout/master
+block content
+	.container
+		.home-boxes
+			.wide.test
+				+contentBox('content', 'Headline', 'Citeste mai mult', '370x170')
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet fermentum diam, sed euismod justo. Nam tincidunt dictum urna, sed vehicula ex eleifend bibendum. In viverra ex non eros blandit, at facilisis dolor laoreet.
+			.wide.test2
+				+contentBox('content', 'Headline', 'Afla mai multe', '370x370')
+			.narrow.test3
+				+contentBox('banner', '175x370')
+			.narrow.test3
+				+contentBox('banner', '175x370')
+	.container			
+		.featured-list
+			h1.block-header This is a content block header
+			.product-list
+				+product-list(4)

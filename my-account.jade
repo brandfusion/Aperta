@@ -1,0 +1,183 @@
+extend jade.resources/layout/master
+block content
+	.container.wrapper
+		.category-page		
+			h1.block-header.category-header.center-header Contul meu
+			.wrapper-fix
+				.login-content
+					form#ordersubmit1(name='ordersubmit', method='post' class='form-style')
+						.login-block
+							p(class='block-headline') Informatii cont
+							.form-group
+								label(for='email') Nume
+								//- input(type='text' name='EcomOrderCustomerPrenume' data-required='1' ident='billingEmail' copy='1')
+								p(style='display: inline;') Daniel Popescu								
+							.form-group
+								label(for='email') Email
+								//- input(type='text' name='EcomOrderCustomerEmail' data-required='1' ident='billingEmail' copy='1')
+								p(style='display: inline;') daniel@aperta.ro	
+							.form-group
+								label(for='email') Telefon
+								//- input(type='text' name='EcomOrderCustomerPrenume' data-required='1' ident='billingEmail' copy='1')
+								p(style='display: inline;') +40722222222
+							a.auth-clients(href='#') Editeaza informatii
+							//- button(type='button' class='edit-info')
+							//- 	i(class='fa fa-wrench')
+							//- 	| Editeaza cont
+						.login-block
+							p(class='block-headline') Adresele mele
+							.address.implicit
+								.form-group
+									h3.address-headline Adresa 1
+									p Str: 
+										span Sighisoara Nr. 10
+									p Oras: 
+										span Bucuresti
+									p Judet: 
+										span Bucuresti
+									a(href='#' class='picked-address') Adresa implicita
+									//- button(type='button')
+									//- 	i(class='fa fa-trash-o')
+									button(type='button')
+										i(class='fa fa-pencil-square-o')			
+							.address
+								.form-group
+									h3.address-headline Adresa 2
+									p Str: 
+										span Bld. Iancului Nr. 10
+									p Oras: 
+										span Bucuresti
+									p Judet: 
+										span Bucuresti		
+									a(href='#' class='picked-address') Selecteaza ca adresa implicita	
+									button(type='button')
+										i(class='fa fa-trash-o')
+									button(type='button')
+										i(class='fa fa-pencil-square-o')		
+							.address
+								.form-group
+									h3.address-headline Adresa 3
+									p Str: 
+										span Bld. Ferdinand Nr. 43
+									p Oras: 
+										span Bucuresti
+									p Judet: 
+										span Bucuresti		
+									a(href='#' class='picked-address') Selecteaza ca adresa implicita			
+									button(type='button')
+										i(class='fa fa-trash-o')
+									button(type='button')
+										i(class='fa fa-pencil-square-o')		
+							.address-new
+								h3.address-headline Adaugare adresa
+								.form-group
+									label(for='email') Nume adresa:
+									input(type='text' name='EcomOrderCustomerPrenume' data-required='1' ident='billingEmail' copy='1')
+								.form-group
+									label(for='email') Strada:
+									input(type='text' name='EcomOrderCustomerPrenume' data-required='1' ident='billingEmail' copy='1')
+								.form-group
+									label(for='email') Orasul:
+									input(type='text' name='EcomOrderCustomerPrenume' data-required='1' ident='billingEmail' copy='1')
+								.form-group
+									label(for='email') Judetul:
+									input(type='text' name='EcomOrderCustomerEmail' data-required='1' ident='billingEmail' copy='1')
+								a.auth-clients(href='#') Adauga adresa
+							button(type='button' class='add-address')
+								i(class='fa fa-plus')			
+								| adauga o adresa
+						.orders-block
+							p(class='block-headline') Comenzile mele
+							table.order-tab(cellpadding='0', cellspacing='0', border='0', width='100%')
+								colgroup
+									col(class='date')
+									col(class='orderId')
+									col(class='price')
+									col(class='payment')
+									col(class='delivery')
+									col(class='excel')
+								thead
+									tr.CustomerCenterMenu
+										th.date
+											| Data
+											.sort
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-down')
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-up')
+										th.orderId
+											| Order ID
+											.sort
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-down')
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-up')
+										th.price
+											| Pret
+											.sort
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-down')
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-up')
+										th.payment
+											| Plata
+											.sort
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-down')
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-up')
+										th.delivery
+											| Livrare
+											.sort
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-down')
+												a(href='javascript:void(0);')
+													i(class='fa fa-angle-up')
+										th.excel 
+								tbody
+									tr
+										td.date
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') 23.05.2014 12:06:34
+										td.orderId
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') ORDER71
+										td.price 2.270 RON
+										td.payment Plata ramburs
+										td.delivery GLS
+										td.excel
+											a(href='/Comenzi?CC21=Orders&ReorderID=ORDER71')
+												i(class='fa fa-print')
+									tr
+										td.date
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') 23.05.2014 12:06:34
+										td.orderId
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') ORDER71
+										td.price 870 RON
+										td.payment Plata ramburs
+										td.delivery GLS
+										td.excel
+											a(href='/Comenzi?CC21=Orders&ReorderID=ORDER71')
+												i(class='fa fa-print')
+									tr
+										td.date
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') 23.05.2014 12:06:34
+										td.orderId
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') ORDER71
+										td.price 1.320 RON
+										td.payment Plata ramburs
+										td.delivery GLS
+										td.excel
+											a(href='/Comenzi?CC21=Orders&ReorderID=ORDER71')
+												i(class='fa fa-print')
+									tr
+										td.date
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') 23.05.2014 12:06:34
+										td.orderId
+											a(href='/Comenzi?CC21=Order&OrderID=ORDER71') ORDER71
+										td.price 2.870 RON
+										td.payment Plata ramburs
+										td.delivery GLS
+										td.excel
+											a(href='/Comenzi?CC21=Orders&ReorderID=ORDER71')
+												i(class='fa fa-print')				
+																
+								

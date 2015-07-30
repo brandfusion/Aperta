@@ -1,0 +1,163 @@
+.cart-page
+	+make-row
+	color: #000
+	font-size: 1em
+.cart-list
+	+make-xs-column(12)	
+.cart-product	
+	padding: 0 $spacing
+	width: 90%
+	@media (min-width: $screen-sm-min)
+		width: 45%
+		float: left
+	@media (min-width: $screen-md-min)
+		width: 50%	
+.cart-delivery
+	padding: 0 $spacing
+	@media (min-width: $screen-sm-min)
+		float: left
+		width: 20%
+	@media (min-width: $screen-md-min)
+		width: 15%
+.cart-quantity		
+	padding: 0 $spacing
+	@media (min-width: $screen-sm-min)
+		float: left
+		width: 15%
+.cart-price		
+	padding: 0 $spacing
+	@media (min-width: $screen-sm-min)
+		float: left
+		width: 20%
+.cart-delete
+	position: absolute
+	right: 10px
+	top: 10px	
+	font-size: 1.5em
+	line-height: 1
+	@media (min-width: $screen-sm-min)
+		font-size: 1em
+
+.header-cart
+	+clearfix
+	border-bottom: 1px solid #000
+	padding-bottom: 0.5em
+	margin-bottom: 1em	
+	font-weight: 800
+	text-transform: uppercase
+	font-size: 0.8em	
+	.cart-product 
+		padding-left: 0px
+	.cart-delivery, .cart-quantity, .cart-price
+		display: none	
+	@media (min-width: $screen-sm-min)
+		.cart-delivery, .cart-quantity, .cart-price
+			display: block 
+.cart-row
+	+clearfix	
+	font-size: 0.9em
+	background-color: #fff
+	padding: 0.2em 0
+	margin-bottom: $spacing
+	position: relative
+	border: 1px solid #ddd
+	@media (min-width: $screen-sm-min)
+		border: none
+	p 
+		margin-bottom: 0px	
+	.media-right 
+		vertical-align: middle		
+		padding-left: 0px
+		@media (min-width: $screen-sm-min)
+			height: 100px
+	.media-left
+		width: 70px	
+		@media (min-width: $screen-sm-min)
+			width: 100px		
+	.cart-price 		
+		span 
+			font-size: 0.7em
+			color: #aaa	
+			&.cart-mobile-left
+				color: #000
+				font-size: 0.8em	
+			&.cart-mobile-right
+				color: #000
+				font-size: 1em
+				font-weight: 700
+				color: $secondary
+				span 
+					font-weight: 400
+					font-size: 0.7em
+					color: #aaa							
+	h2 
+		font-weight: 400	
+		text-transform: none
+		font-size: 1em
+		font-weight: 600
+		a			
+			color: #000
+			font-weight: 700
+	.cart-quantity
+		input 
+			max-width: 40px
+			text-align: right	
+			@media (min-width: $screen-sm-min)
+				max-width: 60px		
+		button			
+			outline: none
+			background-color: #fff
+			border: none
+			font-size: 1.5em
+			line-height: 1
+			@media (min-width: $screen-sm-min)
+				font-size: 1em
+			&:hover 
+				color: $secondary
+	.product-code
+		font-size: 0.8em	
+.cart-summary
+	+clearfix
+	background-color: #fff 
+	line-height: 1.3em 
+	font-size: 0.8em 
+	padding: 0.2em 0.5em
+	font-weight: 400
+	margin-bottom: 0.2em
+	text-align: right
+	// border-top: 2px solid $secondary
+	p 
+		margin-bottom: 0
+	.subtotal 
+		// float: right		
+		font-weight: 800	
+		font-size: 1.2em
+		display: inline-block
+		min-width: 5em
+.cart-footer 
+	+clearfix
+	margin-top: 0.5em
+	font-size: initial
+	// margin-bottom: $spacing*2
+	border-top: 2px solid $secondary
+	padding-top: 0.5em
+	.go-checkout 
+		float: right
+	.continue-shopping
+		margin-right: $spacing	
+
+.cart-mobile-left
+	// width: 49%
+	display: inline-block
+	text-align: right
+	padding-right: $spacing/2
+	font-weight: 700
+	font-size: 0.8em
+	margin-bottom: 0.5em
+.cart-mobile-right
+	// width: 49%
+	display: inline-block
+	text-align: left
+	padding-left: $spacing/2
+	font-size: 0.8em		
+	color: #000	

@@ -1,0 +1,74 @@
+.address
+	background-color: #f6f6f6
+	border: 1px solid #f0f0f0
+	border-radius: 0.5em
+	padding: 0.5em
+	margin-bottom: 0.5em
+	position: relative
+	.form-group
+		margin-bottom: 0px
+	&.implicit
+		background-color: #E4F8C9
+		border: 1px solid #C5EB94
+		.picked-address 
+			color: $secondary
+			&:after
+				content: "\f046"	
+	p 
+		margin-bottom: 0.2em
+		&:last-child
+			margin-bottom: 0
+	.picked-address
+		position: absolute
+		top: 0.5em
+		right: 0.5em
+		color: #000
+		&:after 
+			font-family: "FontAwesome"
+			content: "\f096"
+			margin-left: 0.5em
+.address-headline
+	font-size: 1em
+	font-weight: 600
+	text-transform: uppercase			
+.address-new 
+	background-color: #fff
+	border: 1px solid $secondary
+	border-radius: 0.5em
+	padding: 0.5em
+	margin-bottom: 0.5em
+	position: relative		
+	display: none
+	.address-headline
+		margin-bottom: 0.5em
+	label 
+		font-weight: 400
+	.auth-clients 
+		margin-bottom: 0		
+.orders-block
+	table
+		text-align: left
+	.sort 
+		display: inline	
+		a		
+			color: $secondary
+	a
+		color: #000		
+.order-tab
+	.date
+		width: 15%		
+	.orderId
+		width: 20%		
+	.price 
+		width: 10%		
+	.payment 
+		width: 20%
+	.delivery
+		width: 20%
+	.excel
+		width: 15%
+		text-align: right
+		a
+			color: $primary
+			&:hover 
+				color: $secondary

@@ -1,0 +1,104 @@
+.header
+	+clearfix
+	// margin-bottom: 1em
+	position: relative
+	font-size: 0.9em
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	// background-color: #fff
+	z-index: 99
+	font-family: 'Roboto Condensed', sans-serif
+	@media (max-width: 1350px)
+		font-size: 0.8em
+	.logo	
+		padding-left: 0
+		position: absolute
+		top: -9px
+		left: 0.8em
+		z-index: 99
+		font-size: 1.1em
+		max-width: 40px
+		img 	
+			width: 100%
+	.cos
+		float: right
+		margin-left: 0.5em
+		line-height: 3em
+		// padding-top: 0.5em
+		a 
+			max-width: 40px
+			position: relative
+			float: left
+			padding-top: 0.2em
+			span 
+				position: absolute
+				top: 7px
+				left: 9px
+				z-index: 10
+				background-color: rgba(255, 0, 0, 0.66)
+				// background-color: $primary
+				border-radius: 100%
+				width: 1.8em
+				height: 1.8em
+				padding: 0
+				margin: 0
+				display: block
+				line-height: 1
+				text-align: center
+				color: #fff
+				vertical-align: middle
+				font-size: 0.8em
+				padding: 0.2em
+				padding-top: 0.4em
+				font-weight: 700
+		span
+			color: #79C614
+		.hidden-fix
+			@media (max-width: 1300px)
+				display: none	
+	.search
+		float: right
+		padding-top: 0.7em
+		form 
+			+default-input
+		input
+			+default-input			
+			border-top: none
+			border-left: none
+			border-right: none
+			&.form-control
+				font-size: 1.2em
+				line-height: 1.4
+				border-radius: 0
+				border: none
+				font-weight: 300
+				line-height: 1
+				padding-top: 12px
+				padding: 0.5em
+				margin-top: 0.5em
+		button
+			outline: none
+			background-color: #fff
+			border: none
+			color: $primary
+			font-size: 1.2em
+		.hidden-fix			
+			display: none		
+	.my-account
+		float: right
+		line-height: 3.45em
+		a 
+			color: #000
+			margin-right: 0.5em
+			.fa 
+				margin-right: 0.5em		
+.upper
+	+clearfix
+	border-bottom: 2px solid #FAD2D2
+	background-color: #fff
+	position: relative	
+.lower
+	+clearfix	
+	background-color: rgba(255,255,255,0.7)

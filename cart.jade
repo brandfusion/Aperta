@@ -1,0 +1,158 @@
+extend jade.resources/layout/master
+block content
+	.container.wrapper
+		.category-page		
+			h1.block-header.category-header.center-header Cosul tau	
+			.wrapper-fix
+				.cart-page
+					//- include jade.resources/partials/breadcrumbs.jade
+					.cart-list
+						form#ordersubmit(name='ordersubmit', method='post')
+							.header-cart
+								.cart-product Produs				
+								.cart-delivery Data Livrare				
+								.cart-quantity Cantitate				
+								.cart-price Pret			   
+							.cart-row
+								.cart-product
+									.media-left
+										img.img-responsive(src='http://placehold.it/90x90')					 					 
+									.media-right
+										.details
+											h2
+												a(href='product.html')
+													| Intercalator - biblioraft
+													| -
+													| Rosu						
+											span.product-code
+												| Codul Produsului:
+												| 2342-Rosu				
+								.cart-delivery
+									.media-right
+										p 24 ore				
+								.cart-quantity
+									.media-right
+										input#QuantityOrderLineOL22592.quantity(name='quantity', value='1', type='number', stoc='4', size='30')								   						   
+										button.tooltip-test.btn-update(name='Update', type='button', title='update')
+											i.fa.fa-refresh				
+								.cart-price
+									.media-right
+										p
+											| 199 Lei 
+											span (Include TVA)				 
+								.cart-delete
+									a.orderfunctions(href='#', title='delete')
+										i.fa.fa-times-circle						   
+							.cart-row
+								.cart-product
+									.media-left
+										img.img-responsive(src='http://placehold.it/90x90')					 					 
+									.media-right
+										.details
+											h2
+												a(href='product.html')
+													| Roller Schneider One Hybrid N
+													| -
+													| Albastru						
+											span.product-code
+												| Codul Produsului:
+												| 2711-Albastru				
+								.cart-delivery
+									.media-right
+										p 24 ore				
+								.cart-quantity
+									.media-right
+										input#QuantityOrderLineOL22593.quantity(name='quantity', value='1', type='number', stoc='6', size='30')								   						   
+										button.tooltip-test.btn-update(name='Update', type='button', title='update')
+											i.fa.fa-refresh				
+								.cart-price
+									.media-right
+										p
+											| 179 Lei 
+											span (Include TVA)				 
+								.cart-delete
+									a.orderfunctions(href='#', title='delete')
+										i.fa.fa-times-circle						   
+							.cart-row
+								.cart-product
+									.media-left
+										img.img-responsive(src='http://placehold.it/90x90')					 					 
+									.media-right
+										.details
+											h2
+												a(href='product.html')
+													| Stilou si Roll er Schneider Glam
+													| -
+													| Negru						
+											span.product-code
+												| Codul Produsului:
+												| 6330-Negru				
+								.cart-delivery
+									.media-right
+										p 24 ore				
+								.cart-quantity
+									.media-right
+										input#QuantityOrderLineOL22595.quantity(name='quantity', value='1', type='number', stoc='2', size='30')								   						   
+										button.tooltip-test.btn-update(name='Update', type='button', title='update')
+											i.fa.fa-refresh				
+								.cart-price
+									.media-right
+										p
+											| 609 Lei 
+											span (Include TVA)				 
+								.cart-delete
+									a.orderfunctions(href='#', title='delete')
+										i.fa.fa-times-circle						   
+							.cart-row
+								.cart-product
+									.media-left
+										img.img-responsive(src='http://placehold.it/90x90')					 					 
+									.media-right
+										.details
+											h2
+												a(href='product.html')
+													| Marker pentru whiteboard IC O
+													| -
+													| Verde					
+											span.product-code
+												| Codul Produsului:
+												| 3842-Verde				
+								.cart-delivery
+									.media-right
+										p 24 ore				
+								.cart-quantity
+									.media-right
+										input#QuantityOrderLineOL22597.quantity(name='quantity', value='1', type='number', stoc='999', size='30')								   						   
+										button.tooltip-test.btn-update(name='Update', type='button', title='update')
+											i.fa.fa-refresh				
+								.cart-price
+									.media-right
+										p
+											| 279 Lei 
+											span (Include TVA)				 
+								.cart-delete
+									a.orderfunctions(href='#', title='delete')
+										i.fa.fa-times-circle		
+							.cart-summary
+								p
+									| Total (fara TVA) 
+									span.subtotal 1.021 Lei			   
+							.cart-summary
+								p
+									| TVA 
+									span.subtotal 245 Lei			   
+							.cart-summary
+								p
+									| Total 
+									span.inclTVA (Include TVA)
+									span.subtotal 1266 Lei
+							footer.cart-footer
+								a.continue-shopping(href='category.html') Continua cumparaturile				
+								a.clear-cart(href='#') Goleste cosul				
+								a.go-checkout(href='checkout.html') Finalizeaza comanda
+			.featured-list
+				h2.list-header Produse recomandate
+				.product-list
+					.flexslider
+						ul.slides					
+							+product-list-carousel(8)
