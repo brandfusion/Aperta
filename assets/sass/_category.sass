@@ -7,6 +7,7 @@
 		background-position: left -40px
 		background-repeat: repeat-x
 		height: 200px
+		display: none
 	.cart-banner 
 		padding: 0px 0.5em
 		background-image: url(../img/cart.svg)
@@ -15,9 +16,10 @@
 		background-repeat: no-repeat
 		height: 70px
 		background-size: contain	
+
 	.category-header
-		margin: 0px 0px $spacing
-		padding-left: 0.3em
+		margin: 0px 0px 1.3em
+		padding-left: 3.3em
 		font-weight: 300
 		font-size: 1.6em
 		font-weight: 700
@@ -57,6 +59,7 @@
 				@media (max-width: 768px)	
 					width: 50%
 				// +make-lg-column(2,14)
+	
 
 .filter-header		
 	margin-bottom: $spacing
@@ -83,12 +86,16 @@
 	.filter-item
 		font-size: 0.8em
 		margin-bottom: 1em
+		input[type="checkbox"], input[type="radio"]
+			margin: 0 $spacing/2 0 0
+			vertical-align: middle
+			
 		a		
 			color: #000	
 			&:hover
 				color: $secondary	
 		.filter-title	
-			margin-bottom: 0
+			margin-bottom: $spacing
 			font-weight: 600
 			border-bottom: 2px solid #000
 			// &:before
@@ -97,6 +104,7 @@
 			// 	margin-right: 0.2em
 			// 	color: $red
 				font-weight: 400
+
 .cancel-filters
 	font-size: 0.8em	
 	font-weight: 300
@@ -192,20 +200,35 @@
 			color: #000
 .pagination
 	display: inline-block
+	width: 100%
+	text-align: right
 	&:before
-		font-family: "FontAwesome"
-		content: "\f111"
 		margin-left: 0em
 		margin-right: 1em
 		font-size: 0.4em
 		vertical-align: middle
 	ul
 		display: inline-block
+		list-style-type: none
 		+h-nav
 		li
 			line-height: 0.8
-			&.active
+			border: 1px solid #ddd
+			padding: 0
+			text-align: center
+			margin: 0 0 0 0.5em
+			list-style-type: none
+
+			a
+				display: block
+				margin: 0
+				padding: 0.5em 0.7em
+
+			&.active, &:hover
+				border: 1px solid #fff
+				background: gray
 				a
-					text-decoration: underline		
+					color: #fff
+					text-decoration: none		
 		
 				
