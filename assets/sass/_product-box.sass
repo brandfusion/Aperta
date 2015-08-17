@@ -11,10 +11,13 @@
 		margin: 0px
 	span
 		display: block
+	a 
+		display: block	
 	.product-image
 		min-height: 233px
 		img 
 			max-height: 233px
+			margin: 0 auto
 	.product-item-title
 		font-size: 0.9em
 		font-weight: 400
@@ -92,6 +95,8 @@
 			height: 32px
 			width: 40px	
 			background-color: #000	
+		&.nocart:before 
+			background-image: url(../img/cart-look.svg)
 		&:hover
 			// background-position: left bottom
 			background-color: $primary

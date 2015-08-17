@@ -49,6 +49,10 @@
 		p
 			margin-bottom: 0
 			font-size: 1em
+		.nologin-content
+			margin-bottom: $spacing
+			p 
+				font-size: 0.8em	
 		.product-title
 			font-weight: 300
 			color: #000
@@ -285,7 +289,35 @@
 // 		display: block
 // 		height: 32px
 // 		width: 40px	
-// 		background-color: #000				
+// 		background-color: #000	
+.pin-button
+	background-color: $secondary
+	padding: 0 0.8em
+	line-height: 2em
+	outline: none
+	border: none
+	color: #fff
+	padding-left: 0px
+	&:before		
+		margin-right: 0.5em
+		background-color: $primary
+		display: inline-block
+		float: left
+		background-image: url(../img/pin3.svg)
+		background-repeat: no-repeat	
+		background-size: contain
+		background-position: center top
+		width: 20px
+		height: auto
+		content: ""		
+		border-right: 1px solid #fff
+		display: block
+		height: 32px
+		width: 40px	
+		background-color: #000
+	&:hover		
+		color: #fff
+		background-color: $primary
 .submit-order
 	p
 		display: inline-block
