@@ -97,7 +97,7 @@
 					color: $green
 	.wide
 		+make-sm-column(4)
-		// opacity: 0		
+		opacity: 0		
 		.school, .office, .catalog
 			height: 100%
 			position: relative
@@ -112,7 +112,7 @@
 .featured-list	
 	+make-sm-column(12)	
 	opacity: 1
-	overflow: hidden
+	overflow: hidden	
 	.product-list
 		// margin: 0
 		.item 
@@ -147,3 +147,17 @@
 		+make-xs-column(6)
 		+make-sm-column(3)
 		+make-md-column(2)	
+.homepage-queue
+	.featured-list
+		opacity: 0
+		transform: translateY(10px)
+		&.fadeFromBottom.end
+			opacity: 1
+			transform: translateY(0px)
+	.product-banners
+		opacity: 0
+		transform: translateY(10px)
+		&.fadeFromBottom.end
+			opacity: 1
+			transform: translateY(0px)
+			
