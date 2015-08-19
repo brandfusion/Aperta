@@ -1,5 +1,6 @@
 .home-boxes	
-	+make-sm-column(6)
+	+make-sm-column(12)
+	+make-lg-column(6)
 	padding: 0
 	margin-bottom: 1em
 	// background-color: cyan	
@@ -34,20 +35,9 @@
 		bottom: 0
 		background-color: rgba(255, 255, 255, 0.85)
 		padding: 0.5em
-
-		@media (min-width: $screen-sm-min)
-			left: 0em
-			bottom: 0em
-			padding: 0.5em
-		@media (min-width: $screen-md-min)
-			left: 0em
-			bottom: 0em
-			padding: 0.5em
-		@media (min-width: $screen-lg-min)
-			left: 0.5em
-			bottom: 0.5em
-			right: 0.5em
-			padding: 0.5em
+		left: 0.5em
+		bottom: 0.5em
+		right: 0.5em
 		a 
 			border-bottom: 1px dashed #000
 			color: #000
@@ -55,17 +45,9 @@
 			display: block
 			position: relative
 			padding-right: 2em
-			font-size: 0.7em
+			font-size: 0.8em
 			line-height: 1.2
-			padding: 0.5em 0
-			@media (min-width: $screen-sm-min)
-				font-size: 0.7em
-			@media (min-width: $screen-md-min)
-				font-size: 0.7em	
-			@media (min-width: $screen-lg-min)
-				font-size: 0.8em
-
-
+			padding: 0.5em 0	
 			&:after
 				font-family: "FontAwesome"
 				content: "\f105"
@@ -97,7 +79,9 @@
 					color: $green
 	.wide
 		+make-sm-column(4)
+		position: relative
 		opacity: 0		
+		height: 300px
 		.school, .office, .catalog
 			height: 100%
 			position: relative
