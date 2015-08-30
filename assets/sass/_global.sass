@@ -9,7 +9,7 @@ body
 		width: $container-md
 	@media (min-width: $screen-lg-min)
 		width: $container-lg
-	overflow-x: hidden	
+	// overflow-x: hidden	
 .container
 	width: 100%
 	max-width: 100%	
@@ -32,7 +32,9 @@ body
 	+make-md-column(2)
 .breadcrumbs
 	padding: 0px $spacing
-	// background-color: #000
+	padding-left: 4em
+	@media (min-width: $screen-sm-min)
+		padding-left: 5.5em
 	ul
 		+h-nav
 		a
@@ -71,7 +73,7 @@ body
 		text-align: center
 		margin-bottom: 10px
 		clear: both
-		border: 1px solid darken($primary, 10%)
+		// border: 1px solid darken($primary, 10%)
 		line-height: 2.8em	
 		&:before 
 			font-family: "FontAwesome"
@@ -143,10 +145,11 @@ body
 	max-width: 1170px
 	padding: 0 $spacing
 	margin: 0 auto
-	border: 1px solid #000
 	padding: 1em
-	margin-bottom: 3em		
 	+clearfix
+	@media (min-width: $screen-sm-min)
+		border: 1px solid #000
+		margin-bottom: 3em
 .reset-password
 	padding: 0 0.5em
 	color: #000
@@ -202,30 +205,24 @@ body
 	margin-bottom: 15px
 	display: block
 .row-premii 
-	margin: 0 -10px 
-	clear: both 
-	float: left
-
+	// margin: 0 -10px 
+	// clear: both 
+	// float: left
+	+make-row
 .box-premii 
-	width: 25% 
-	float: left  
-	padding: 0 10px 20px 
-	box-sizing: border-box
-
+	+make-sm-column(6)
+	+make-sm-column(3) 	
+	margin-bottom: 0.5em 	
 .box-premii .box 
-	padding: 10px 
+	padding: 0.5em
 	border: 1px solid #ede7e7
 	height: 225px
-
 .box-premii .box p 
 	min-height: 45px
-
 .box-premii .box img 
-	height: 140px
-	width: auto
-	display: block
+	max-height: 140px		
 	margin: 0 auto
-
+	max-width: 100%
 .row-campanie 
 	margin-top: 0.5em
 	font-size: initial
@@ -238,21 +235,16 @@ body
 	float: right
 	margin-top: -20px 
 	margin-right: -20px
-
-
 .content-wide
 	max-width: 100% 
 	padding: 1em
-	margin: 0 5em 3em 5em	
+	@media (min-width: $screen-sm-min)
+		margin: 0 5em 3em 5em	
 	h2 
 		margin: 0 0 $spacing 0
 .content-box 
 	max-width: 1170px
 	padding: 1em
-
-.breadcrumbs
-	padding: 0.5em 0.5em 0 5.5em	
-
 .btn-green, .btn-black, .btn-gray, .btn-pink, .btn-blue 
 	-webkit-transition: all 0.2s ease-in
 	-o-transition: all 0.2s ease-in
@@ -326,42 +318,42 @@ body
 #CookieWarning
 	+clearfix
 	z-index: 9001
-	background-color: rgba(0, 60, 111, 0.9)	
-	font: 12px/18px arial
+	background-color: rgba(0, 60, 111, 0.9)		
 	color: #fff
 	position: fixed
-	left: 0px
-	bottom: 4.5em
+	left: 0px	
 	width: 100%
-	padding: 10px
-	// height: 90px
-	font-family: 'Roboto Condensed', sans-serif
+	padding: 0.5em	
 	font-size: 0.8em
 	line-height: 2em
 	font-weight: 400
+	bottom: 0
+	@media (min-width: $screen-sm-min)
+		bottom: 4.5em
 	a 
 		color: #fff 
 		text-decoration: underline
 		&:hover
 			color: #59A7EA
 .CookieWarning_Header	
-	padding: 10px
+	padding: 0.5em
 	font-size: 1.2em
 	font-weight: 400
 	display: inline
-.CokieWarning_Info
-	margin: 0px 0px 0px 10px
+.CokieWarning_Info	
 	display: inline-block
-	// font-size: 1.2em	
-.CookieWarning_Buttons
-	// text-align: right
-	// position: absolute
-	// right: 20px
-	// bottom: 15px
-	float: right
+	margin: 0
+	vertical-align: middle 
+	line-height: 2em
+	@media (min-width: $screen-sm-min)
+		margin: 0 0 0 0.5em
+.CookieWarning_Buttons		
+	line-height: 2em
+	@media (min-width: $screen-sm-min)
+		float: right
 .CookieWarning_DoNotAccept, .CookieWarning_FunctionelOnly, .CookieWarning_AcceptAll
 	display: inline-block
-	margin-right: 10px
+	margin-right: 0.5em
 
 .CookieWarning_AcceptAll
 	box-shadow: none
@@ -371,21 +363,34 @@ body
 	background-color: transparent
 	font-weight: 400
 	border: 1px solid #5D7D99
+	line-height: 2em
 	&:hover 
 		background-color: #265C8B
 	&:after 
 		font-family: "FontAwesome"
 		content: "\f058"
 		margin-left: 0.5em
-// 	background-color: rgb(7, 214, 60)
-// 	display: inline-block
-// 	color: black
-// 	border: 1px solid rgb(4, 132, 37)
-// 	padding: 3px 8px
-// 	margin-right: 0px	
 .fadeFromBottom
 	opacity: 0
 	transform: translateY(10px)
 .fadeFromBottom.end
 	opacity: 1
 	transform: translateY(0px)
+.page__header
+	margin: 0
+	padding: 0.2em 0		
+	font-weight: 300
+	font-size: 1.2em
+	text-transform: uppercase
+	text-align: center
+	background-color: #000
+	color: #fff
+	@media (min-width: $screen-sm-min)
+		background-color: transparent
+		color: #000
+		font-weight: 600
+		border: none
+		text-align: center
+		margin: 1em 0 
+		font-size: 1.6em
+		

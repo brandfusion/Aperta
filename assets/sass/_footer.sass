@@ -3,12 +3,16 @@
 	+clearfix
 	background-color: #f8efef
 	font-size: 0.8em
-	padding: 1.5em 0
-	position: fixed
-	bottom: 0 
-	left: 0
-	right: 0
+	padding: 1em 0	
 	color: #000
+	text-align: center
+	@media (min-width: $screen-sm-min)
+		text-align: left
+		position: fixed
+		bottom: 0 
+		left: 0
+		right: 0
+		padding: 1.5em 0
 	ul
 		display: inline-block
 		+h-nav
@@ -17,9 +21,10 @@
 			margin-right: 0.5em
 	.footer-block
 		+make-sm-column(6)
-		&.rights
-			text-align: right
+		&.rights			
 			line-height: 1
+			@media (min-width: $screen-sm-min)
+				text-align: right
 	.title
 		@extend .list-header
 		border-bottom: 1px solid #aaa
