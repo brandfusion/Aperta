@@ -62,14 +62,22 @@
 				display: none	
 	.search
 		float: right
-		padding-top: 0.7em
+		// padding-top: 0.7em
 		form 
 			+default-input
+			margin-bottom: 0
 		input
 			+default-input			
-			border-top: none
-			border-left: none
-			border-right: none
+			border: none
+			margin: 0
+			padding: 0
+			line-height: 3em
+			vertical-align: middle
+			padding: 0.2em 0.5em
+			text-align: right
+			background-color: transparent
+			@media (max-width: 800px)
+				width: 8em
 			&.form-control
 				border-radius: 0
 				border: 1px solid #f0f0f0
@@ -83,7 +91,7 @@
 				margin-top: 0
 		button
 			outline: none
-			background-color: #fff
+			background-color: transparent
 			border: none
 			color: $primary
 			font-size: 1.2em

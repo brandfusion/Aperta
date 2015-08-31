@@ -131,6 +131,14 @@
 		+make-xs-column(6)
 		+make-sm-column(3)
 		+make-md-column(2)	
+.flex-direction-nav a.flex-next:before 
+	content: '\f105'
+.flex-direction-nav a:before
+	font-family: "FontAwesome"
+	font-size: 40px
+	line-height: 1
+	display: inline-block
+	content: '\f104'	
 .homepage-queue
 	.featured-list
 		opacity: 0
@@ -149,3 +157,10 @@
 		display: block
 	img 
 		margin: 0 auto 0.5em			
+.featured-list--category
+	.flexslider .slides 
+		img 
+			width: auto
+			margin: 0 auto		
+	.product-box 
+		border: none		
