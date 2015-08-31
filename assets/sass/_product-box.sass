@@ -67,6 +67,9 @@
 		// +background-image(linear-gradient(to right, $red 50%, $blue 50%))
 		background-size: 200% 100%
 		background-position: right bottom
+		border-radius: 4px
+		overflow: hidden
+		box-shadow: 2px 2px 0px #E2E2E2
 		// &:before
 		// 	font-family: "FontAwesome"
 		// 	content: "\f002"
@@ -100,6 +103,7 @@
 		&:hover
 			// background-position: left bottom
 			background-color: $primary
+			box-shadow: 2px 2px 0px #FFB5B5
 			&:before
 				background-color: #000	
 	.product-item-button-nocart
@@ -119,6 +123,7 @@
 		// +background-image(linear-gradient(to right, $red 50%, $blue 50%))
 		background-size: 200% 100%
 		background-position: right bottom
+		+button-style
 		// &:before
 		// 	font-family: "FontAwesome"
 		// 	content: "\f002"

@@ -55,19 +55,23 @@ body
 				// content: ""	
 				// color: secondary
 .btn-submit
-	+transition(all 0.2s ease-in)
-	background-color: secondary	
+	+transition(all 0.2s ease-in)		
 	color: #fff
 	outline: none
 	box-shadow: none
 	background-color: $secondary
+	border-radius: 4px
+	overflow: hidden
+	box-shadow: 2px 2px 0px #E2E2E2
 	&:hover
 		background-color: $primary		
-		color: #fff
+		color: #fff		
+		box-shadow: 2px 2px 0px #FFB5B5
 .go-checkout
 	@extend .btn-submit
 	line-height: 2em
 	padding: 0 1em
+	vertical-align: middle
 	@media (max-width: $screen-sm-min - 1)
 		width: 100%
 		text-align: center
@@ -88,9 +92,13 @@ body
 	color: #fff
 	outline: none
 	box-shadow: none
+	border-radius: 4px
+	overflow: hidden
+	box-shadow: 2px 2px 0px #E2E2E2
 	&:hover
 		background-color: $primary
 		color: #fff	
+		box-shadow: 2px 2px 0px #FFB5B5
 	@media (max-width: $screen-sm-min - 1)
 		text-align: center
 		font-size: 0.8em
@@ -109,9 +117,13 @@ body
 	color: #fff
 	outline: none
 	box-shadow: none
+	border-radius: 4px
+	overflow: hidden
+	box-shadow: 2px 2px 0px #E2E2E2
 	&:hover
 		color: #fff
 		background-color: $primary	
+		box-shadow: 2px 2px 0px #E2E2E2
 	@media (max-width: $screen-sm-min - 1)
 		text-align: center
 		background-color: #fff 
@@ -246,40 +258,28 @@ body
 	max-width: 1170px
 	padding: 1em
 .btn-green, .btn-black, .btn-gray, .btn-pink, .btn-blue 
-	-webkit-transition: all 0.2s ease-in
-	-o-transition: all 0.2s ease-in
-	transition: all 0.2s ease-in
-	background-color: secondary
 	color: #fff
 	outline: none
 	box-shadow: none
 	border: none
 	padding: 0.3em 0.5em    
 	background-color: #79C614
-
+	+button-style
 .btn-black   	
 	background-color: #000
-	color: #fff    
-
 .btn-gray 
 	background-color: #ddd
-	color: #000    
-
 .btn-pink 
 	background-color: #D58480
-	color: #fff
-
 .btn-blue 
 	background-color: #30B0E5
-	color: #fff
+// .btn-green:hover, .btn-black:hover 
+// 	background-color: #FF5757
+// 	color: #fff	
 
-.btn-green:hover, .btn-black:hover 
-	background-color: #FF5757
-	color: #fff	
-
-.btn-gray:hover, .btn-pink:hover, .btn-blue:hover 
-	background-color: #000
-	color: #fff  
+// .btn-gray:hover, .btn-pink:hover, .btn-blue:hover 
+// 	background-color: #000
+// 	color: #fff  
 
 .dynamicweb-map input, .dynamicweb-map select 
 	border: 1px solid #ddd
@@ -305,16 +305,20 @@ body
 	width: 60%
 	margin: 1em 0 0 0
 
-	input[type=text], input[type=password], textarea
-		border: 1px solid #eee
-		padding: 0.5em
-		color: #000
-		min-width: 250px
+	input[type="text"], input[type="password"], textarea
+		+input-style
 	input[type=submit]
 		background-color: $secondary
 		color: #fff
 		border: none
 		padding: 0.5em 1em
+		border-radius: 4px
+		overflow: hidden
+		box-shadow: 2px 2px 0px #E2E2E2
+		&:hover		
+			color: #fff
+			background-color: $primary
+			box-shadow: 2px 2px 0px #FFB5B5
 #CookieWarning
 	+clearfix
 	z-index: 9001
