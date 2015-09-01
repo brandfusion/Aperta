@@ -78,7 +78,7 @@ body
 		margin-bottom: 10px
 		clear: both
 		// border: 1px solid darken($primary, 10%)
-		line-height: 2.8em	
+		// line-height: 2.8em	
 		&:before 
 			font-family: "FontAwesome"
 			content: "\f046"
@@ -99,15 +99,15 @@ body
 		background-color: $primary
 		color: #fff	
 		box-shadow: 2px 2px 0px #FFB5B5
-	@media (max-width: $screen-sm-min - 1)
-		text-align: center
-		font-size: 0.8em
-		float: right
-		width: 40%	
-		line-height: 3em
-		background-color: #fff 
-		color: #000 
-		border: 1px solid #000
+	// @media (max-width: $screen-sm-min - 1)
+	// 	text-align: center
+	// 	font-size: 0.8em
+	// 	float: right
+	// 	width: 40%	
+	// 	line-height: 3em
+	// 	background-color: #fff 
+	// 	color: #000 
+	// 	border: 1px solid #000
 .continue-shopping
 	+transition(all 0.2s ease-in)
 	line-height: 2em
@@ -124,16 +124,16 @@ body
 		color: #fff
 		background-color: $primary	
 		box-shadow: 2px 2px 0px #E2E2E2
-	@media (max-width: $screen-sm-min - 1)
-		text-align: center
-		background-color: #fff 
-		color: #000 
-		border: 1px solid #000
-		font-size: 0.8em
-		float: left
-		width: 55%
-		margin-right: 5%
-		line-height: 3em					
+	// @media (max-width: $screen-sm-min - 1)
+	// 	text-align: center
+	// 	background-color: #fff 
+	// 	color: #000 
+	// 	border: 1px solid #000
+	// 	font-size: 0.8em
+	// 	float: left
+	// 	width: 55%
+	// 	margin-right: 5%
+	// 	line-height: 3em					
 .place-order
 	@extend .go-checkout
 	display: inline-block
@@ -240,7 +240,15 @@ body
 	font-size: initial
 	border-top: 2px solid #79C614
 	padding-top: 0.5em	
-
+	@media (min-width: 768px) and (max-width: 800px)
+		font-size: 0.9em
+	@media (max-width: 767px)
+		a 
+			display: block 
+			padding: 0.5em 0 
+			margin-bottom: 0.5em
+			text-align: center
+			width: 100%	
 .particip
 	background-color: white
 .times
@@ -397,4 +405,30 @@ body
 		text-align: center
 		margin: 1em 0 
 		font-size: 1.6em
-		
+.contest-winners
+	text-align: center
+	img 
+		margin-bottom: 0.5em
+	p 
+		text-align: center
+		margin-bottom: 0
+	h3 
+		margin-bottom: 0.5em	
+	table
+		max-width: 500px
+		width: 100%
+		table-layout: auto
+		margin: 1em auto 1em
+		@media (max-width: 992px)
+			max-width: 100%
+		td 
+			padding: 0.2em 0.5em
+		tr 
+			background-color: #eee
+		tr:first-child
+			background-color: #74D318
+			color: #fff 
+.afla-libraria
+	background-color: #D58480	
+.rezultatele-afisate
+	background-color: #30B0E5			
