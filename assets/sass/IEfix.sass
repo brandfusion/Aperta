@@ -1,0 +1,96 @@
+$blue: #00bed4
+$red: #FF5757
+$darkred: #D58480
+$green: #79C614
+$darkgreen: #6CA71D
+$accent: $darkred
+$light-gray: #eee
+$grid-gutter-width: 1em
+$spacing: $grid-gutter-width/2
+$cyan: #28CBD4
+$primary: $red
+$secondary: $green
+
+.main-nav
+	li 
+		position: relative
+		&:first-child a
+			&:before 
+				background-color: #74D318	
+			&:hover 
+				color: #74D318	
+		&:first-child + li  a
+			&:before	
+				background-color: #30B0E5
+			&:hover 
+				color: #30B0E5	
+		&:first-child + li + li a
+			&:before	
+				background-color: #E53092	
+			&:hover 
+				color: #E53092	
+		&:first-child + li + li + li a
+			&:before	
+				background-color: #E2E50F
+			&:hover 
+				color: #E2E50F	
+		&:first-child + li + li + li + li a
+			&:before	
+				background-color: #30E5CE	
+			&:hover 
+				color: #30E5CE	
+		&:first-child + li + li + li + li + li a
+			&:before	
+				background-color: #308EE5	
+			&:hover 
+				color: #308EE5			
+		&:first-child + li + li + li + li + li + li a
+			&:before	
+				background-color: #79C614	
+			&:hover 
+				color: #79C614	
+		&:first-child + li + li + li + li + li + li + li a
+			&:before	
+				background-color: #F17D0B
+			&:hover 
+				color: #F17D0B	
+.product-box	
+	.product-item-button
+		&:before		
+			margin-right: 0.5em
+			background-color: $primary
+			display: inline-block
+			float: left
+			background-image: none
+			width: 20px
+			height: auto
+			font-family: "FontAwesome"
+			content: "\f07a"			
+			border-right: 1px solid #fff
+			display: block
+			height: 32px
+			width: 40px	
+			background-color: #000				
+			text-align: center
+		&.nocart:before 
+			background-image: none		
+			font-family: "FontAwesome"
+			content: "\f002"	
+.pin-button	
+	&:before		
+		margin-right: 0.5em
+		background-color: $primary
+		display: inline-block
+		float: left
+		background-image: none		
+		width: 20px
+		height: auto
+		content: ""		
+		border-right: 1px solid #fff
+		display: block
+		height: 32px
+		width: 40px	
+		background-color: #000
+		text-align: center
+		font-family: "FontAwesome"
+		content: "\f041"			

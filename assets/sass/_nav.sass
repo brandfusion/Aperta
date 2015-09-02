@@ -5,65 +5,83 @@
 	padding-left: 5em
 	line-height: 3em
 	float: left
-	display: inline-block
-	margin-bottom: -1px
+	display: inline-block	
 	ul
-		+h-nav
-		// position: relative
+		+h-nav		
 	a		
 		font-weight: 400	
 		color: #000
-		padding: 0.2em 0.5em
-		// &.active 
-		// 	color: #000
-		border-bottom: 2px solid #f6f6f6
+		padding: 0.2em 0.5em		
+		display: block
+		position: relative
 		@media (max-width: 1350px)
-			padding: 0.3em 0.5em
-		// &:hover
-		// 	border-color: $primary		
+			padding: 0.3em 0.5em			
 		&.active
 			// border-color: #74D318	
 			// background-color: #74D318	
 			// color: #fff
+		&:before
+			content: ""
+			height: 2px 
+			width: 100%
+			position: absolute
+			left: 0
+			bottom: -2px
+			right: 0
+			background-color: #fff
+				/* border-bottom: 2px solid #FAD2D2; */	
 	li 
 		position: relative
-		&:first-child a 
-			border-color: #74D318	
+		&:first-child a
+			&:before 
+				background-color: #74D318	
 			&:hover 
 				color: #74D318	
-		&:nth-child(2) a	
-			border-color: #30B0E5
+		&:nth-child(2) a
+			&:before	
+				background-color: #30B0E5
 			&:hover 
 				color: #30B0E5	
-		&:nth-child(3) a	
-			border-color: #E53092	
+		&:nth-child(3) a
+			&:before	
+				background-color: #E53092	
 			&:hover 
 				color: #E53092	
-		&:nth-child(4) a	
-			border-color: #E2E50F
+		&:nth-child(4) a
+			&:before	
+				background-color: #E2E50F
 			&:hover 
 				color: #E2E50F	
-		&:nth-child(5) a	
-			border-color: #30E5CE	
+		&:nth-child(5) a
+			&:before	
+				background-color: #30E5CE	
 			&:hover 
 				color: #30E5CE	
-		&:nth-child(6) a	
-			border-color: #308EE5	
+		&:nth-child(6) a
+			&:before	
+				background-color: #308EE5	
 			&:hover 
 				color: #308EE5			
-		&:nth-child(7) a	
-			border-color: #79C614	
+		&:nth-child(7) a
+			&:before	
+				background-color: #79C614	
 			&:hover 
 				color: #79C614	
-		&:nth-child(8) a	
-			border-color: #F17D0B
+		&:nth-child(8) a
+			&:before	
+				background-color: #F17D0B
 			&:hover 
 				color: #F17D0B	
 		ul 
 			li 
 				line-height: 1.4
 				a 
-					border: none	
+					border: none
+					&:before
+						position: relative 
+						background-color: transparent 
+						height: 0
+						width: 0	
 	.dropdown		
 		a:after
 			font-family: "FontAwesome"
@@ -78,20 +96,16 @@
 		display: none
 		+v-nav
 		+clearfix		
-		border-bottom: 2px solid #FAD2D2
-		// min-height: 300px
+		border-bottom: 2px solid #FAD2D2		
 		position: absolute
 		top: 100%
-		left: 0
-		// right: 0
+		left: 0	
 		min-width: 200px
-		background-color: rgba(255,255,255,0.95)
-		// border-top: 2px solid #FAD2D2
-		// box-shadow: 2px 2px 3px #aaa
+		background-color: #fff
+		background-color: rgba(255,255,255,0.95)	
 		padding: 1em 0.5em 0
-		margin: 1px 0 0 0
+		margin: 2px 0 0 0
 		.level-2
-
 			a
 				color: #000
 				// text-transform: uppercase

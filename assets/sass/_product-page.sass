@@ -1,8 +1,11 @@
 .product-page
-	+make-row()
+	@media (min-width: $screen-sm-min)
+		+make-row()	
 	.breadcrumbs
 		padding: 0.5em 0.5em 0 4.5em
-
+	.product-item-image 
+		width: 100%
+		max-width: 100%
 	.product-item
 		+make-sm-column(12)
 		+clearfix
