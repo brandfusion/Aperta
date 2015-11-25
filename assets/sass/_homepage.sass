@@ -1,170 +1,203 @@
-.home-boxes	
-	+make-sm-column(12)
-	+make-lg-column(6)
-	padding: 0
-	margin-bottom: 1em
-	// background-color: cyan	
-	font-family: "Roboto Condensed"
-	a 
-		display: block
-	.title
-		font-weight: 300
-		display: block
-		font-size: 0.8em
-		line-height: 1.3
-		text-transform: uppercase
-		padding: 0.5em 0.5em
-		color: #fff	
-		white-space: nowrap
-		text-overflow: ellipsis
-		display: block
-		overflow: hidden
-		@media (min-width: $screen-sm-min)
-			font-size: 0.8em
-		@media (min-width: $screen-md-min)
-			font-size: 0.8em	
-		// @media (min-width: $screen-lg-min)
-		// 	font-size: 1.2em			
-		a 
-			vertical-align: middle
-	// img 
-	// 	margin-bottom: 1em
-	.inner-content
-		position: absolute
-		left: 0
-		bottom: 0
-		background-color: #fff
-		background-color: rgba(255, 255, 255, 0.85)
-		padding: 0.5em
-		left: 0.5em
-		bottom: 0.5em
-		right: 0.5em
-		a 
-			border-bottom: 1px dashed #000
-			color: #000
-			font-weight: 300	
-			display: block
-			position: relative
-			padding-right: 2em
-			font-size: 0.8em
-			line-height: 1.2
-			padding: 0.5em 0	
-			&:after
-				font-family: "FontAwesome"
-				content: "\f105"
-				position: absolute
-				right: 0			
-	.school		
-		.title
-			background-color: #008aff
-		a:hover 
-			color: #008aff
-	.office
-		.title
-			background-color: #7fce13	
-		a:hover 
-			color: #7fce13		
-	.catalog
-		a 
-			height: 100%
-			position: relative
-		.title
-			background-color: #F2F2F2
-			color: #000
-			.fa 
-				float: right				
-				color: $primary
-				cursor: pointer
-				margin-left: 0.2em
-				&:hover
-					color: $green
-	.wide
-		+make-sm-column(4)
-		position: relative
-		opacity: 0		
-		height: 300px
-		margin-bottom: 0.5em
-		@media (min-width: $screen-sm-min)
-			margin-bottom: 0
-		.school, .office, .catalog
-			height: 100%
-			position: relative
-	.narrow
-		+make-sm-column(2)	
-	.test2
-		+box-img-only()
-	.test3
-		+box-img-only()
-	.test4
-		+box-img-only()
-.featured-list	
-	+make-sm-column(12)	
-	opacity: 1
-	overflow: hidden	
-	.product-list
-		// margin: 0
-		.item 
-			width: 100%
+.home-boxes 
+  +make-sm-column(12)
+  +make-lg-column(6)
+  padding: 0
+  margin-bottom: 1em
+  // background-color: cyan 
+  font-family: "Roboto Condensed"
+  a 
+    display: block
+  .title
+    font-weight: 300
+    display: block
+    font-size: 0.8em
+    line-height: 1.3
+    text-transform: uppercase
+    padding: 0.5em 0.5em
+    color: #fff 
+    white-space: nowrap
+    text-overflow: ellipsis
+    display: block
+    overflow: hidden
+    @media (min-width: $screen-sm-min)
+      font-size: 0.8em
+    @media (min-width: $screen-md-min)
+      font-size: 0.8em  
+    // @media (min-width: $screen-lg-min)
+    //  font-size: 1.2em      
+    a 
+      vertical-align: middle
+  // img 
+  //  margin-bottom: 1em
+  .inner-content
+    position: absolute
+    left: 0
+    bottom: 0
+    background-color: #fff
+    background-color: rgba(255, 255, 255, 0.85)
+    padding: 0.5em
+    left: 0.5em
+    bottom: 0.5em
+    right: 0.5em
+    a 
+      border-bottom: 1px dashed #000
+      color: #000
+      font-weight: 300  
+      display: block
+      position: relative
+      padding-right: 2em
+      font-size: 0.8em
+      line-height: 1.2
+      padding: 0.5em 0  
+      &:after
+        font-family: "FontAwesome"
+        content: "\f105"
+        position: absolute
+        right: 0      
+  .school   
+    .title
+      background-color: #008aff
+    a:hover 
+      color: #008aff
+  .office
+    .title
+      background-color: #7fce13 
+    a:hover 
+      color: #7fce13    
+  .catalog
+    a 
+      height: 100%
+      position: relative
+    .title
+      background-color: #F2F2F2
+      color: #000
+      .fa 
+        float: right        
+        color: $primary
+        cursor: pointer
+        margin-left: 0.2em
+        &:hover
+          color: $green
+  .wide
+    +make-sm-column(4)
+    position: relative
+    opacity: 0    
+    height: 300px
+    margin-bottom: 0.5em
+    @media (min-width: $screen-sm-min)
+      margin-bottom: 0
+    .school, .office, .catalog
+      height: 100%
+      position: relative
+  .narrow
+    +make-sm-column(2)  
+  .test2
+    +box-img-only()
+  .test3
+    +box-img-only()
+  .test4
+    +box-img-only()
+.featured-list  
+  +make-sm-column(12) 
+  opacity: 1
+  overflow: hidden  
+  .product-list
+    // margin: 0
+    .item 
+      width: 100%
 .newin-list
-	+make-sm-column(4)	
-	.product-list
-		.item
-			+make-sm-column(3)
-.logos-list			
-	+make-xs-column(12)
-	padding-bottom: 1em
-	overflow: hidden
+  +make-sm-column(4)  
+  .product-list
+    .item
+      +make-sm-column(3)
+.logos-list     
+  +make-xs-column(12)
+  padding-bottom: 1em
+  overflow: hidden
 
-	.list-header
-		margin-bottom: 1.5em
-	img 
-		max-width: 100px
-		margin: 0 auto
+  .list-header
+    margin-bottom: 1.5em
+  img 
+    max-width: 100px
+    margin: 0 auto
 .list-header
-	font-size: 1em
-	font-family: "Roboto Condensed", sans-serif
-	font-weight: 400
-	border-bottom: 2px solid #000
-	margin-bottom: 0.5em
-	line-height: 1.5em	
-	color: #000
-	text-transform: uppercase		
+  font-size: 1em
+  font-family: "Roboto Condensed", sans-serif
+  font-weight: 400
+  border-bottom: 2px solid #000
+  margin-bottom: 0.5em
+  line-height: 1.5em  
+  color: #000
+  text-transform: uppercase   
 .product-list
-	+make-row	
-	.item 		
-		+make-xs-column(6)
-		+make-sm-column(3)
-		+make-md-column(2)	
+  +make-row 
+  .item     
+    +make-xs-column(6)
+    +make-sm-column(3)
+    +make-md-column(2)  
 .flex-direction-nav a.flex-next:before 
-	content: '\f105'
+  content: '\f105'
 .flex-direction-nav a:before
-	font-family: "FontAwesome"
-	font-size: 40px
-	line-height: 1
-	display: inline-block
-	content: '\f104'	
+  font-family: "FontAwesome"
+  font-size: 40px
+  line-height: 1
+  display: inline-block
+  content: '\f104'  
 .homepage-queue
-	.featured-list
-		opacity: 0
-		transform: translateY(10px)
-		&.fadeFromBottom.end
-			opacity: 1
-			transform: translateY(0px)
-	.product-banners
-		opacity: 0
-		transform: translateY(10px)
-		&.fadeFromBottom.end
-			opacity: 1
-			transform: translateY(0px)
+  .featured-list
+    opacity: 0
+    transform: translateY(10px)
+    &.fadeFromBottom.end
+      opacity: 1
+      transform: translateY(0px)
+  .product-banners
+    opacity: 0
+    transform: translateY(10px)
+    &.fadeFromBottom.end
+      opacity: 1
+      transform: translateY(0px)
 .product-banners
-	a
-		display: block
-	img 
-		margin: 0 auto 0.5em			
+  a
+    display: block
+  img 
+    margin: 0 auto 0.5em      
 .featured-list--category
-	.flexslider .slides 
-		img 
-			width: auto
-			margin: 0 auto		
-	.product-box 
-		border: none		
+  .flexslider .slides 
+    img 
+      width: auto
+      margin: 0 auto    
+  .product-box 
+    border: none    
+.video-container
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 30px
+  height: 0
+  overflow: hidden
+  iframe, object, embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+.video-wrapper 
+  display: none
+  width: 100%
+  max-width: 800px
+  padding: 1em
+  background-color: #fff 
+  border-radius: 0.5em
+  .times 
+    background-color: #fff
+    border-radius: 100%
+    padding: 0
+    width: 2em
+    height: 2em
+    display: block
+    line-height: 2em
+    position: absolute
+    top: 0
+    right: 0
+    text-align: center
+    z-index: 2    
+    margin: 0
