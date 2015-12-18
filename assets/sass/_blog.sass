@@ -5,9 +5,11 @@
   max-width: 100%
   margin: 0 auto
   // padding: 1em  
-  padding-left: 5rem
+  padding-left: 0rem
   padding-top: 1rem
   font-size: 0.8rem
+  @media (min-width: 768px)
+    padding-left: 5rem
   @media (min-width: 1400px)
     font-size: 1rem
   +clearfix
@@ -21,6 +23,9 @@
       display: inline
     a
       font-weight: 600
+    img 
+      max-width: 100% !important 
+      height: auto !important 
 .category-header 
   h1
     border-bottom: 1px solid $accent
@@ -66,14 +71,8 @@
     // +text-overflow()
     font-size: 1.4em
     @media (max-width: 767px)
-      width: 100%
-      background-color: #FD9494
-      font-size: 1.4em
-      text-transform: uppercase
-      color: #fff 
-      text-align: center
-      font-weight: 400 
       line-height: 2em
+      text-transform: uppercase
     a
       display: inline
   p
@@ -91,6 +90,14 @@
     margin-bottom: 0.5em    
 .article-list
   +make-sm-column(9)
+  padding-left: 0 
+  @media (min-width: 768px)
+    padding-left: 3.75rem
+  @media (min-width: 1280px)
+    padding-left: 4.5rem  
+  .page__header--blog
+    margin-bottom: 1rem  
+    padding-left: 0.5rem
   .media
     margin-bottom: 1em
     border-bottom: 1px solid #eee
@@ -98,9 +105,11 @@
     &:last-child
       border: none
   .media-object
-    width: 180px  
-    @media (max-width:768px)
-      width: 60px   
+    width: 180px      
+  .media-left 
+    @media (max-width: 767px)
+      display: block
+      margin-bottom: 1rem  
   h2
     font-weight: 400
     @media (max-width:480px)
@@ -109,10 +118,27 @@
       color: #000
       &:hover 
         color: darken(adjust_hue($accent, 136), 11)
-  p
-    margin-bottom: 0.5em
+  .post-summary
+    font-size: 1.3em
+    font-weight: 300      
+    p
+      margin-bottom: 0.5rem
   .inline
     margin-bottom: 0.2em
+  .title 
+    a
+      font-size: 2em
+      font-weight: 300
+      color: #000
+      line-height: 1  
+  .post-date 
+    font-size: 0.8rem  
+    @media (max-width: 767px)
+      margin-bottom: 0
+  .item 
+    margin-bottom: 1rem
+    padding-bottom: 1rem
+    border-bottom: 1px solid #FAD2D2    
 .blog-aside
   +clearfix
   font-size: 0.8em
@@ -154,6 +180,9 @@
   font-size: 1.3em
   font-weight: 300
   line-height: 1.4
+  img 
+    max-width: 100% !important 
+    height: auto !important
   p 
     margin-bottom: 0.5rem
 .article-post-image 
@@ -166,7 +195,7 @@
   .box-heading
     font-size: 1.5em
     font-weight: 300
-    border-bottom: 2px solid $saturatedred
+    border-bottom: 1px solid $saturatedred
     margin-bottom: 0.5rem
   .side-tags-container 
     a 
@@ -189,11 +218,12 @@
       margin-bottom: 0.2em  
       &:hover 
         background-color: $secondary
-  .last-article-list      
+  .last-article-list  
+    margin-bottom: 0.5rem    
     h5 
       font-size: inherit 
       font-weight: 300
-      display: inline-block
+      display: block
       a 
         color: #B1322F     
         line-height: 1.6em    
@@ -211,6 +241,16 @@
           margin-right: 0.5em      
     li 
       border-bottom: 1px solid #eee 
-      
+.article-list-page
+  font-size: 0.8rem
+  +clearfix
+  @media (min-width: 1400px)
+    font-size: 1rem
+.pagination 
+  span, a 
+    width: 1em
+    text-align: center
+    @media (max-width: 767px)
+      width: 2em
 
    
