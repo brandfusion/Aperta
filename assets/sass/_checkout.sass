@@ -1,253 +1,282 @@
 .checkout 
-	// +make-row
-	+clearfix
-	h2 
-		font-weight: 300
-		margin-bottom: 0.5em
-	.checkout-headline 
-		font-weight: 800
-		text-transform: uppercase
-		border-bottom: 1px solid #000	
-		line-height: 1
-		padding-bottom: 0.5em
-		margin-bottom: 1em
-		+clearfix
-		p 
-			margin-bottom: 0px
-		* 
-			display: inline-block
-		a 
-			float: right
-			color: #000
-			text-transform: none
-			font-weight: 400
-			&:hover 
-				color: $secondary
-			&:before 
-				font-family: "FontAwesome"
-				content: "\f059"
-				margin-right: 0.2em
-				color: $secondary	
-			&.edit
-				font-size: 0.9em
-				color: #000
-				&:before
-					content: "\f07a"				
-					margin-right: 0.5em
-					font-size: 1.2em
-					color: #000
-				&:hover 
-					color: $secondary
-					&:before
-						color: $secondary
-	label
-		font-weight: 600
-		width: 200px	
-		display: inline-block
-		margin-bottom: 0.5em
-		vertical-align: top
-		@media (min-width: $screen-lg-min)
-			width: 150px
-		&.address 
-			width: 90%
-			@media (min-width: $screen-lg-min)
-				margin-bottom: 4.8em
-	input[type="text"],input[type="email"],input[type="password"]
-		width: 200px
-		max-width: 200px
-		border: 1px solid #aaa
-		box-shadow: 0px 0px 3px #eee	
-		line-height: 2em
-		padding: 0 0.5em
-		&:focus 
-			border-color: $secondary
-			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
-	select 
-		line-height: 2em
-		padding: 0.2em 0.5em
-		width: 200px
-		border: 1px solid #aaa
-		background-color: #fff	
-		outline: none
-		&:focus 
-			border-color: $secondary
-			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+  // +make-row
+  +clearfix
+  h2 
+    font-weight: 300
+    margin-bottom: 0.5em
+  .checkout-headline 
+    font-weight: 800
+    text-transform: uppercase
+    border-bottom: 1px solid #000 
+    line-height: 1
+    padding-bottom: 0.5em
+    margin-bottom: 1em
+    +clearfix
+    p 
+      margin-bottom: 0px
+    * 
+      display: inline-block
+    a 
+      float: right
+      color: #000
+      text-transform: none
+      font-weight: 400
+      &:hover 
+        color: $secondary
+      &:before 
+        font-family: "FontAwesome"
+        content: "\f059"
+        margin-right: 0.2em
+        color: $secondary 
+      &.edit
+        font-size: 0.9em
+        color: #000
+        &:before
+          content: "\f07a"        
+          margin-right: 0.5em
+          font-size: 1.2em
+          color: #000
+        &:hover 
+          color: $secondary
+          &:before
+            color: $secondary
+  label
+    font-weight: 600
+    width: 200px  
+    display: inline-block
+    margin-bottom: 0.5em
+    vertical-align: top
+    @media (min-width: $screen-lg-min)
+      width: 150px
+    &.address 
+      width: 90%
+      @media (min-width: $screen-lg-min)
+        margin-bottom: 4.8em
+  input[type="text"],input[type="email"],input[type="password"]
+    width: 200px
+    max-width: 200px
+    border: 1px solid #aaa
+    box-shadow: 0px 0px 3px #eee  
+    line-height: 2em
+    padding: 0 0.5em
+    &:focus 
+      border-color: $secondary
+      box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+  select 
+    line-height: 2em
+    padding: 0.2em 0.5em
+    width: 200px
+    border: 1px solid #aaa
+    background-color: #fff  
+    outline: none
+    &:focus 
+      border-color: $secondary
+      box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
 .checkout-content
-	font-size: 0.8em
-	+make-sm-column(8)
+  font-size: 0.8em
+  +make-sm-column(8)
 .checkout-detail
-	@media (max-width: $screen-sm-min - 1)
-		display: none
-	font-size: 0.8em
-	+make-sm-column(4)
-	p 
-		margin-bottom: 0.5em
-		+clearfix
-		a
-			font-size: 0.9em
-			color: $secondary
-			text-decoration: underline 
-			&:hover 
-				color: $secondary
-		span 
-			float: right
-			font-weight: 600	
-		sup 
-			font-size: 0.6em
-			color: #000
-			font-weight: 700	
-	.total-pay
-		font-weight: 800
-		border-bottom: 2px solid #000
-		margin-bottom: 0
-		span 
-			font-weight: 800		
-	.links 
-		color: #000
-		text-decoration: underline
-		font-size: 0.8em
-		&:hover 
-			color: $secondary
-.form-group
-	margin-bottom: 0.5em	
+  @media (max-width: $screen-sm-min - 1)
+    display: none
+  font-size: 0.8em
+  +make-sm-column(4)
+  p 
+    margin-bottom: 0.5em
+    +clearfix
+    a
+      font-size: 0.9em
+      color: $secondary
+      text-decoration: underline 
+      &:hover 
+        color: $secondary
+    span 
+      float: right
+      font-weight: 600  
+    sup 
+      font-size: 0.6em
+      color: #000
+      font-weight: 700  
+  .total-pay
+    font-weight: 800
+    border-bottom: 2px solid #000
+    margin-bottom: 0
+    span 
+      font-weight: 800    
+  .links 
+    color: #000
+    text-decoration: underline
+    font-size: 0.8em
+    &:hover 
+      color: $secondary
 .transport-box
-	img 
-		display: inline-block
-		max-height: 16px
-		display: none
-	label 
-		margin-bottom: 0
-	input 
-		margin-bottom: 0
-	.transport-detail			
-		font-size: 0.8em
-		color: #777	
+  img 
+    display: inline-block
+    max-height: 16px
+    display: none
+  label 
+    margin-bottom: 0
+  input 
+    margin-bottom: 0
+  .transport-detail     
+    font-size: 0.8em
+    color: #777 
 .transport, .metoda-plata 
-	margin-top: 1em
-	label 
-		width: 250px		
+  margin-top: 1em
+  label 
+    width: 250px    
 .coupon
-	margin-top: 1em
-	a 
-		background-color: #000
-		color: #FFF
-		line-height: 2em
-		border: 1px solid #000
-		padding: 0 1em
-		font-weight: 400	
-		&:hover 
-			background-color: $secondary 
-			border-color: $secondary
-.checkout-comment	
-	margin-top: 1em			
-	textarea 
-		width: 100%
-		max-width: 100%
-		outline: none 
-		border: 1px solid #aaa
-		box-shadow: 0px 0px 3px #eee	
-		&:focus 
-			border-color: $secondary
-			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+  margin-top: 1em
+  margin-bottom: 2em
+  a 
+    background-color: #000
+    color: #FFF
+    line-height: 2em  
+    padding: 0 1em
+    font-weight: 400  
+    &:hover 
+      background-color: $secondary 
+      border-color: $secondary
+.checkout-comment 
+  margin-top: 1em     
+  textarea 
+    width: 100%
+    max-width: 100%
+    outline: none 
+    border: 1px solid #aaa
+    box-shadow: 0px 0px 3px #eee  
+    &:focus 
+      border-color: $secondary
+      box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
 .total 
-	+clearfix
-	margin-top: 1em
-	font-weight: 700
-	border-bottom: 1px solid #000
-	line-height: 1.5em
-	padding-bottom: 0.2em
-	margin-bottom: $spacing
-	.total-sum 
-		font-size: 1.5em
-	p 
-		margin-bottom: 0		
+  +clearfix
+  margin-top: 1em
+  font-weight: 700
+  border-bottom: 1px solid #000
+  line-height: 1.5em
+  padding-bottom: 0.2em
+  margin-bottom: $spacing
+  .total-sum 
+    font-size: 1.5em
+  p 
+    margin-bottom: 0    
 .finish
-	p
-		a 
-			color: #000
-			text-decoration: underline			
+  p
+    a 
+      color: #000
+      text-decoration: underline      
 .checkout-login-container
-	+make-row
-	margin-bottom: $spacing
-	display: none
-	.checkout-login 
-		background-color: #fff
-		padding: $spacing 0
-		color: #000
-		margin: 0 $spacing
-		border-bottom: 2px solid $secondary
-		+clearfix
-	a 
-		color: #000
-		text-decoration: underline
-		&:hover 
-			color: $secondary
-	.headline
-		border-bottom: 1px solid #ddd
-		padding-bottom: 0.5em
-		line-height: 1
-		font-weight: 700
-		margin-bottom: 0.5em
-	label
-		width: 190px	
-		@media (min-width: $screen-lg-min)
-			width: 140px
-	.login-box 	
-		+make-sm-column(8)
-		+make-lg-column(12)
-	.checkout-social-login		
-		+make-sm-column(4)	
-		+make-lg-column(12)
-		@media (min-width: $screen-lg-min)
-			margin-top: 2em	
-		a 
-			text-decoration: none 
-			width: 100%
-			&:before
-				font-family: "FontAwesome"
-				margin-right: 0.2em
-				width: 12px
-				display: inline-block
-				vertical-align: middle
-			&.facebook-login 
-				&:before 				
-					color: #3b5998
-					content: "\f09a"
-			&.google-login
-				&:before
-					color: #DF4A32
-					content: "\f0d5"
+  +make-row
+  margin-bottom: $spacing
+  display: none
+  .checkout-login 
+    background-color: #fff
+    padding: $spacing 0
+    color: #000
+    margin: 0 $spacing
+    border-bottom: 2px solid $secondary
+    +clearfix
+  a 
+    color: #000
+    text-decoration: underline
+    &:hover 
+      color: $secondary
+  .headline
+    border-bottom: 1px solid #ddd
+    padding-bottom: 0.5em
+    line-height: 1
+    font-weight: 700
+    margin-bottom: 0.5em
+  label
+    width: 190px  
+    @media (min-width: $screen-lg-min)
+      width: 140px
+  .login-box  
+    +make-sm-column(8)
+    +make-lg-column(12)
+  .checkout-social-login    
+    +make-sm-column(4)  
+    +make-lg-column(12)
+    @media (min-width: $screen-lg-min)
+      margin-top: 2em 
+    a 
+      text-decoration: none 
+      width: 100%
+      &:before
+        font-family: "FontAwesome"
+        margin-right: 0.2em
+        width: 12px
+        display: inline-block
+        vertical-align: middle
+      &.facebook-login 
+        &:before        
+          color: #3b5998
+          content: "\f09a"
+      &.google-login
+        &:before
+          color: #DF4A32
+          content: "\f0d5"
 .xlg-container 
-	+clearfix
+  +clearfix
 .xlg-column
-	@media (min-width: $screen-lg-min)
-		width: 50%	
-		float: left 
-		&:nth-child(even)
-			padding-left: $spacing/2
-		&:nth-child(odd)
-			padding-right: $spacing/2
+  @media (min-width: $screen-lg-min)
+    width: 50%  
+    float: left 
+    &:nth-child(even)
+      padding-left: $spacing/2
+    &:nth-child(odd)
+      padding-right: $spacing/2
 
 //active checkout fields
 .transport-box
-	.plati:hover 
-		background-color: #D8F7D7
-	.livrare:hover
-		background-color: #D8F7D7	
+  .plati:hover 
+    background-color: #D8F7D7
+  .livrare:hover
+    background-color: #D8F7D7 
 .transport-box 
-	.checkout-active
-		background-color: #D8F7D7
+  .checkout-active
+    background-color: #D8F7D7
 
 select, input[type="text"], input[type="email"], input[type="password"], textarea
-	&.checkout-active
-		border: 1px solid #1BC208
-		background-color: #D8F7D7	
-	&.checkout-error
-		border: 1px solid #ff0049
-		background-color: #FFC7D7
+  &.checkout-active
+    border: 1px solid #1BC208
+    background-color: #D8F7D7 
+  &.checkout-error
+    border: 1px solid #ff0049
+    background-color: #FFC7D7
 .stick 
-	position: fixed 
-	top: 0		
-#customerAccepted	
-	margin-top: 3px
-	margin-right: 0.5em
+  position: fixed 
+  top: 0    
+#customerAccepted 
+  margin-top: 3px
+  margin-right: 0.5em
+.receipt-row
+  .price 
+    text-align: right
+.receipt-summary
+  text-align: right 
+  border-top: 2px solid #000
+  padding-top: 1em
+  p 
+    margin-bottom: 0
+    span 
+      min-width: 10em
+      text-align: left
+      display: inline-block
+      float: left
+.receipt-row 
+  .name 
+    color: #000
+    font-weight: 700 
+  .code 
+    font-size: 0.8em
+  .media-left
+    vertical-align: middle
+    width: 20%
+    height: 100px
+  .media-body
+    vertical-align: middle  
+    height: 100px   
+  .media-object 
+    max-height: 100px
+    width: auto
+    margin: 0 auto    

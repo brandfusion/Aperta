@@ -1,226 +1,248 @@
 .category-page
-	+make-row()
-	.category-banner		
-		padding: 0px 0.5em
-		background-image: url(../img/bibliorafturi.jpg)
-		background-size: 27%
-		background-position: left -40px
-		background-repeat: repeat-x
-		height: 200px
-		display: none
-	.cart-banner 
-		padding: 0px 0.5em
-		background-image: url(../img/cart.svg)
-		background-size: 27%
-		background-position: 5em top
-		background-repeat: no-repeat
-		height: 70px
-		background-size: contain
-	.category-header
-		margin: 0px 0px 1.3em
-		padding-left: 3.3em
-		font-weight: 300
-		font-size: 1.2em
-		font-weight: 700
-		text-transform: uppercase		
-		border-bottom: 2px solid #FAD2D2
-		@media (min-width: $screen-sm-min)
-			font-size: 1.6em
-	.center-header
-		border: none 
-		text-align: center 
-		margin-top: 1em
-	.aside-category
-		@extend .aside									
-	.main
-		+make-sm-column(8)
-		+make-md-column(10)
-		.product-list
-			+clearfix
-			+make-row()
-			.item 		
-				// +make-xs-column(6)
-				// +make-sm-column(6)
-				// +make-md-column(3)
-				@media (max-width: 1480px)
-					width: 20%
-				@media (max-width: 1200px)
-					width: 25%		
-				@media (max-width: 992px)
-					width: 33.3%	
-				@media (max-width: 768px)	
-					width: 50%
-				// +make-lg-column(2,14)
-	
+  +make-row()
+  .category-banner    
+    padding: 0px 0.5em
+    background-image: url(../img/bibliorafturi.jpg)
+    background-size: 27%
+    background-position: left -40px
+    background-repeat: repeat-x
+    height: 200px
+    display: none
+  .cart-banner 
+    padding: 0px 0.5em
+    background-image: url(../img/cart.svg)
+    background-size: 27%
+    background-position: 5em top
+    background-repeat: no-repeat
+    height: 70px
+    background-size: contain
+  .category-header
+    margin: 0px 0px 1.3em
+    padding-left: 3.3em
+    font-weight: 300
+    font-size: 1.2em
+    font-weight: 700
+    text-transform: uppercase   
+    border-bottom: 2px solid #FAD2D2
+    @media (min-width: $screen-sm-min)
+      font-size: 1.6em
+  .center-header
+    border: none 
+    text-align: center 
+    margin-top: 1em
+  .aside-category
+    @extend .aside                  
+  .main
+    +make-sm-column(8)
+    +make-md-column(10)
+    .product-list
+      +clearfix
+      +make-row()
+      .item     
+        // +make-xs-column(6)
+        // +make-sm-column(6)
+        // +make-md-column(3)
+        @media (max-width: 1480px)
+          width: 20%
+        @media (max-width: 1200px)
+          width: 25%    
+        @media (max-width: 992px)
+          width: 33.3%  
+        @media (max-width: 768px) 
+          width: 50%
+        // +make-lg-column(2,14)
+  
 
-.filter-header		
-	margin-bottom: $spacing
-	-webkit-user-select: none /* Chrome all / Safari all */
-	-moz-user-select: none     /* Firefox all */
-	-ms-user-select: none      /* IE 10+ */
-	/* No support for these yet, use at own risk */
-	-o-user-select: none
-	user-select: none
-	line-height: 1.6
-	@media (max-width: 992px)
-		display: block
-		margin-bottom: 1em
-		cursor: pointer
-		&:after
-			font-family: "FontAwesome"
-			content: "\f107"
-			float: right
+.filter-header    
+  margin-bottom: $spacing
+  -webkit-user-select: none /* Chrome all / Safari all */
+  -moz-user-select: none     /* Firefox all */
+  -ms-user-select: none      /* IE 10+ */
+  /* No support for these yet, use at own risk */
+  -o-user-select: none
+  user-select: none
+  line-height: 1.6
+  @media (max-width: 992px)
+    display: block
+    margin-bottom: 1em
+    cursor: pointer
+    &:after
+      font-family: "FontAwesome"
+      content: "\f107"
+      float: right
 .filter-list
-	@media (max-width: 768px)
-		display: none
-		padding-bottom: 1em	
-.filter-vertical			
-	.filter-item
-		font-size: 0.8em
-		margin-bottom: 1em
-		input[type="checkbox"], input[type="radio"]
-			margin: 0 $spacing/2 0 0
-			vertical-align: middle
-			
-		a		
-			color: #000	
-			&:hover
-				color: $secondary	
-		.filter-title	
-			margin-bottom: $spacing
-			font-weight: 600
-			border-bottom: 2px solid #000
-			// &:before
-			// 	font-family: "FontAwesome"
-			// 	content: "\f105"
-			// 	margin-right: 0.2em
-			// 	color: $red
-				font-weight: 400
+  @media (max-width: 768px)
+    display: none
+    padding-bottom: 1em 
+.filter-vertical      
+  .filter-item
+    font-size: 0.8em
+    margin-bottom: 1em
+    input[type="checkbox"], input[type="radio"]
+      margin: 0 $spacing/2 0 0
+      vertical-align: middle
+      
+    a   
+      color: #000 
+      &:hover
+        color: $secondary 
+    .filter-title 
+      margin-bottom: $spacing
+      font-weight: 600
+      border-bottom: 2px solid #000
+      // &:before
+      //  font-family: "FontAwesome"
+      //  content: "\f105"
+      //  margin-right: 0.2em
+      //  color: $red
+        font-weight: 400
 
 .cancel-filters
-	font-size: 0.8em	
-	font-weight: 300
-	color: gray
-	border-top: 1px solid #eee
-	padding-top: 0.2em
-	display: block
-	&:after
-		font-family: "FontAwesome"
-		content: "\f00d"
-		margin-left: 0.5em
-	&:hover
-		color: red
-	@media (max-width: 768px)
-		padding: 0.5em 1em
-		font-size: 1em
-		color: #000
-		border: 1px solid #aaa
-		display: inline-block
-		font-weight: 400	
+  font-size: 0.8em  
+  font-weight: 300
+  color: gray
+  border-top: 1px solid #eee
+  padding-top: 0.2em
+  display: block
+  &:after
+    font-family: "FontAwesome"
+    content: "\f00d"
+    margin-left: 0.5em
+  &:hover
+    color: red
+  @media (max-width: 768px)
+    padding: 0.5em 1em
+    font-size: 1em
+    color: #000
+    border: 1px solid #aaa
+    display: inline-block
+    font-weight: 400  
 .manufacturer
-	ul
-		+h-nav()
-		li
-			margin-right: 1em
+  ul
+    +h-nav()
+    li
+      margin-right: 1em
 .brands
-	ul
-		+v-nav()
-.colors	
-	ul
-		+make-row()
-		padding-top: $spacing/2
-		li
-			// +make-xs-column(6)	
-			float: left
-			padding: 0 $spacing	
-			margin-bottom: 0.5em	
-	a
-		display: block
-		padding: 0.2em
-		text-align: center
-		margin-bottom: 0
-		width: 1em
-		height: 1em
-		&:hover
-			color: #000
+  ul
+    +v-nav()
+.colors 
+  ul
+    +make-row()
+    padding-top: $spacing/2
+    li
+      // +make-xs-column(6) 
+      float: left
+      padding: 0 $spacing 
+      margin-bottom: 0.5em  
+  a
+    display: block
+    padding: 0.2em
+    text-align: center
+    margin-bottom: 0
+    width: 1em
+    height: 1em
+    &:hover
+      color: #000
 .summerwear
-	ul
-		+v-nav()
-	a
-		&:before
-			font-family: "FontAwesome"
-			content: "\f096"			
-			display: inline-block			
-			margin-right: 5px
-			width: 12px
-		&.checked
-			font-weight: 600
-			&:before
-				content: "\f046"
+  ul
+    +v-nav()
+  a
+    &:before
+      font-family: "FontAwesome"
+      content: "\f096"      
+      display: inline-block     
+      margin-right: 5px
+      width: 12px
+    &.checked
+      font-weight: 600
+      &:before
+        content: "\f046"
 .sort-block
-	margin-bottom: $spacing
-	line-height: 2em
-	font-size: 0.8em
-	p
-		display: inline-block
-		color: #000
-		margin-right: 0.5em
-		margin-bottom: 0px
-	a
-		display: inline-block
-		color: #000
-		margin-right: 0.5em
-		&:hover
-			color: $secondary
-	.view
-		display: inline-block
-		a.active
-			text-decoration: underline
-		&:before
-			font-family: "FontAwesome"
-			content: "\f111"
-			margin-left: 0em
-			margin-right: 1em
-			font-size: 0.4em
-			vertical-align: middle
-	.sort
-		display: inline-block
-		float: right
-		select
-			border: 1px solid #000
-			outline: none
-			color: #000
+  margin-bottom: $spacing
+  line-height: 2em
+  font-size: 0.8em
+  p
+    display: inline-block
+    color: #000
+    margin-right: 0.5em
+    margin-bottom: 0px
+  a
+    display: inline-block
+    color: #000
+    margin-right: 0.5em
+    &:hover
+      color: $secondary
+  .view
+    display: inline-block
+    a.active
+      text-decoration: underline
+    &:before
+      font-family: "FontAwesome"
+      content: "\f111"
+      margin-left: 0em
+      margin-right: 1em
+      font-size: 0.4em
+      vertical-align: middle
+  .sort
+    display: inline-block
+    float: right
+    select
+      border: 1px solid #000
+      outline: none
+      color: #000
 .pagination
-	display: inline-block
-	width: 100%
-	text-align: right
-	&:before
-		margin-left: 0em
-		margin-right: 1em
-		font-size: 0.4em
-		vertical-align: middle
-	ul
-		display: inline-block
-		list-style-type: none
-		+h-nav
-		li
-			line-height: 0.8
-			border: 1px solid #ddd
-			padding: 0
-			text-align: center
-			margin: 0 0 0 0.5em
-			list-style-type: none
+  display: inline-block
+  width: 100%
+  text-align: right
+  &:before
+    margin-left: 0em
+    margin-right: 1em
+    font-size: 0.4em
+    vertical-align: middle
+  ul
+    display: inline-block
+    list-style-type: none
+    +h-nav
+    li
+      line-height: 0.8
+      border: 1px solid #ddd
+      padding: 0
+      text-align: center
+      margin: 0 0 0 0.5em
+      list-style-type: none
 
-			a
-				display: block
-				margin: 0
-				padding: 0.5em 0.7em
+      a
+        display: block
+        margin: 0
+        padding: 0.5em 0.7em
 
-			&.active, &:hover
-				border: 1px solid #fff
-				background: gray
-				a
-					color: #fff
-					text-decoration: none		
-		
-				
+      &.active, &:hover
+        border: 1px solid #fff
+        background: gray
+        a
+          color: #fff
+          text-decoration: none   
+.search-retry
+  button  
+    outline: none
+    background-color: #FF5757
+    border: none
+    color: #FFFFFF
+    font-size: 1em
+    height: 2.5em
+    vertical-align: middle
+    line-height: 2.5em
+    padding: 0 0.75em   
+    &:hover 
+      background-color: #79C614
+  #q-retry
+    border-width: 1px
+    border: none
+    margin: 0   
+    line-height: 2.5em
+    height: 2.5em
+    vertical-align: middle
+    padding: 0.2em 0.5em      
+    background-color: #eee
+    text-align: left  
+        

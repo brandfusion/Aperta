@@ -6,3 +6,4 @@ jade.resources/*.html
 prepros.cfg
 *.html
 *.jpg
+_backup
